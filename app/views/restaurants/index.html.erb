@@ -3,4 +3,5 @@
   <h2><%= restaurant.name %></h2>
   <p><%= restaurant.address %></p>
   <p><%= "*" * restaurant.stars %></p>
+  <%= link_to "Accéder à la page du restaurant", restaurant_path(restaurant) %>
 <% end %>
