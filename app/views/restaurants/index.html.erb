@@ -1,7 +1,10 @@
 <h1>Mes restaurants</h1>
+<%= link_to "Créer un restaurant", new_restaurant_path %>
 <% @restaurants.each do |restaurant| %>
   <h2><%= restaurant.name %></h2>
   <p><%= restaurant.address %></p>
   <p><%= "*" * restaurant.stars %></p>
   <%= link_to "Accéder à la page du restaurant", restaurant_path(restaurant) %>
+  <%= link_to "Updater le restaurant", edit_restaurant_path(restaurant) %>
+  <%= link_to "Détruire le restaurant", restaurant_path(restaurant), method: :delete %>
 <% end %>
